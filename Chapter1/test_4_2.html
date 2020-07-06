@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function testScore(name, kor, eng) {
+			this.userName = name;
+			this.korNum = kor;
+			this.engNum = eng;
+
+			this.getTehstInfo = function() {
+				document.write("이름:" + this.userName, "<br>");
+				document.write("국어:" + this.korNum, "<br>");
+				document.write("영어:" + this.engNum, "<br>");
+			}
+			this.getAvg = function() {
+					return (this.korNum + this.engNum) / 2;
+				}
+			}
+
+			var kim = new testScore("김", 80, 90);
+			var oh = new testScore("오", 100, 80);
+
+			kim.getTehstInfo();
+			document.write("평균 점수:" + kim.getAvg(), "<br><br>");
+
+			oh.getTehstInfo();
+			document.write("평균 점수:" + oh.getAvg(), "<br><br>");
+	</script>
+</body>
+</html>
